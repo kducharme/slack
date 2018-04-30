@@ -1,0 +1,39 @@
+.sidebar__channels {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar__channels--header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+
+.sidebar__channels--header > h2 {
+    font-size: 1em;
+    color: white;
+    font-weight: 200;
+    opacity: .5;
+}
+
+.sidebar__channels--header > button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    opacity: .5;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar__channels--header > button:hover {
+    opacity: 1;
+}
+
+.sidebar__channels--header > .add-channel {
+    font-size: 12px!important;
+    padding: 0px!important;
+}
+
+
