@@ -1,9 +1,7 @@
-const laneSetup = require('./laneSetup');
-const getFirebaseData = require('./firebaseRead');
-const createFilterArea = require('./createFilterArea');
+const loadDatabase = require('./databaseLoad');
+const createSidebar = require('./sidebarStructure')
 
-createFilterArea();
-getFirebaseData();
-laneSetup();
+loadDatabase();
 
-module.exports = printTasks;
+
+

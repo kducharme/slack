@@ -3,41 +3,43 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="styling/styles.css">
-    <link rel="stylesheet" href="styling/tasks.css">
-    <link rel="stylesheet" href="styling/taskModal.css">
-    <link rel="stylesheet" href="styling/dashboard.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Crimson+Text|Lato" rel="stylesheet">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/channels.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Lato|Oxygen" rel="stylesheet">
 
-    <title>Task List</title>
-    <link rel="shortcut icon" type="image" href="img/weblogo.png" />
+    <title>Slack</title>
+    <!-- <link rel="shortcut icon" type="image" href="img/weblogo.png" /> -->
 
 </head>
 
 <body>
-    <nav>
-        <span class='nav--logo'>
-            <img src='img/weblogo.png'>
-        </span>
-        <a href='index.html' class='active'>
-            <i class="material-icons active" id='home'>home</i>
-        </a>
-        <a href='news.html'>
-            <i class="material-icons">person</i>
-        </a>
-        <i class="material-icons">settings</i>
-    </nav>
+    <div class='sidebar'>
+
+    </div>
+
+    <div class='content'>
+        <div class='options'>
+
+        </div>
+        <div class='messages'>
+        </div>
+
+        <div class='create'>
+            <input class='create__input'>
+        </div>
+
+    </div>
 
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
     <script>
         // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyBWkRVvXhD1uriMStIvXfdClE8JMfl3dps",
-            authDomain: "task-list-cf398.firebaseapp.com",
-            databaseURL: "https://task-list-cf398.firebaseio.com",
-            projectId: "task-list-cf398",
-            stdorageBucket: "task-list-cf398.appspot.com",
-            messagingSenderId: "285994374260"
+            apiKey: "AIzaSyBDyaekgARRIZDbPacnvz6W9ScYTWvcHz4",
+            authDomain: "slack-kd.firebaseapp.com",
+            databaseURL: "https://slack-kd.firebaseio.com",
+            projectId: "slack-kd",
+            storageBucket: "slack-kd.appspot.com",
+            messagingSenderId: "1004422551027"
         };
         firebase.initializeApp(config);
     </script>

@@ -1,0 +1,165 @@
+/* Channels section on sidebar */
+
+.sidebar__channels {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Section header */
+
+.sidebar__channels--header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.sidebar__channels--header > h2 {
+    font-size: 1em;
+    color: white;
+    font-family: 'Oxygen';
+    font-weight: 200!important;
+    opacity: .7;
+}
+
+.sidebar__channels--header > button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    opacity: .7;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar__channels--header > button:hover {
+    opacity: 1;
+}
+
+.sidebar__channels--header > .add-channel {
+    font-size: 12px!important;
+    padding: 0px!important;
+}
+
+.sidebar__channels--list {
+    display: flex;
+    flex-direction: column;
+}
+
+.individual-channel {
+    display: flex;
+    flex-direction: flex-start;
+    align-items: center;
+    height: 32px;
+    margin: 0 -15px 0 -15px;
+    padding: 0 15px 0 15px;
+}
+
+.individual-channel:hover {
+    cursor: pointer;
+    background-color: #3b2b3a;
+}
+
+.individual-channel > img {
+    margin: 0 5px 0 0;
+    opacity: .5;
+    padding: 0;
+    height: 15px;
+    width: 15px;
+}
+
+.individual-channel > a {
+    font-family: 'Oxygen';
+    font-weight: lighter!important;
+    font-size: 15px;
+    opacity: .7;
+    color: white;
+}
+
+/* Add new channel modal */
+
+.createChannel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+}
+
+.createChannel__content {
+    width: 640px;
+}
+
+.createChannel__title {
+    display: flex;
+    flex-direction: column;
+}
+
+.createChannel__title > h1 {
+    font-size: 34px;
+    line-height: 41px;
+    font-weight: bolder!important;
+    color: var(--bodyTextColor);
+    margin-bottom: .5rem;
+}
+
+.createChannel__title > p {
+    font-weight: 400;
+    font-size: .9rem;
+    line-height: 1.5rem;
+    color: var(--borderColor);
+    margin-bottom: 2rem;
+}
+
+.createChannel__content--input {
+    border: 1px solid var(--inputBorder);
+    border-radius: .25rem;
+    margin-bottom: 16px;
+    padding-left: 1em;
+    height: 48px;
+    font-size: 18px;
+    width: 100%;
+}
+
+.createChannel__content--input::placeholder {
+    color: var(--inputBorder);
+}
+
+.createChannel__content--actions {
+    display: flex;
+    float: right;
+    margin: 20px -17px;
+}
+
+.createChannel__content--cancel {
+    padding: 6px 15px 6px 15px;
+    border-radius: .25rem;
+    border: .5px solid #e8e8e8;
+    background-color: #f3f3f3;
+    color: var(--bodyTextColor);
+    margin-right: 15px;
+    font-size: 18px;
+    height: 44px;
+}
+
+.createChannel__content--create {
+    font-size: 18px;
+    background-color: #e8e8e8;
+    color: rgba(44,45,48,.75);
+    font-weight: 800;
+    border-radius: .25rem;
+    border: none;
+    padding: 6px 15px 6px 15px;
+    height: 44px;
+}
