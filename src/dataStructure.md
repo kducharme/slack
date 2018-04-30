@@ -15,6 +15,7 @@ channelList = [];
 
 channel = {
     name: 'Watercooler',
+    purpose: 'To discuss cool things',
     dateCreated: 'April 30, 2018'
     users: [username, username, etc.],
     messages: ['Hello world!', 'Waddup bro'];
