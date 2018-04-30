@@ -1,19 +1,45 @@
 // Creates channels component for sidebar
-const sidebarChannels = () => {
-    const buttonFactory = require('./buttonFactoryIcon');
-    const newChannelModal = require('./newChannelModal');
-    const sectionTitle = document.createElement('span');
-    sectionTitle.classList = 'sidebar__channels--header'
+const sidebarChannels = (allData) => {
+    const channelComponent = document.createElement('span');
+    const channelList = document.createElement('span');
+    const sidebarStructure = require('./sidebarStructure');
+    const header = channelsHeader();
+    
+    allData.forEach(c => {
+        const channelRow = document.createElement('span');
+        channelRow.classList = 'individual-channel'
+        const hash = document.createElement('img');
+        hash.src = 'img/hash.png'
 
-    const title = document.createElement('h2');
-    title.textContent = 'Channels'
+        const channel = document.createElement('a')
+        channel.textContent = c.name;
+        channel.href = c.name;
 
-    const createChannel = buttonFactory('sidebar__channels--new', '<i class="material-icons add-channel">add_circle_outline</i>', newChannelModal)
+        channelRow.appendChild(hash);
+        channelRow.appendChild(channel);
+        channelList.appendChild(channelRow);
+    })
+    channelList.classList = 'sidebar__channels--list';
+    
+    channelComponent.appendChild(header);
+    channelComponent.appendChild(channelList);
 
-    sectionTitle.appendChild(title);
-    sectionTitle.appendChild(createChannel);
-
-    return sectionTitle
+    sidebarStructure(channelComponent)
 }
 
 module.exports = sidebarChannels;
+
+const channelsHeader = () => {
+    const buttonFactory = require('./buttonFactoryIcon');
+    const newChannelModal = require('./newChannelModal');
+
+    const header = document.createElement('span');
+    header.classList = 'sidebar__channels--header'
+    const title = document.createElement('h2');
+    title.textContent = 'Channels'
+    const createChannel = buttonFactory('sidebar__channels--new', '<i class="material-icons add-channel">add_circle_outline</i>', newChannelModal)
+    header.appendChild(title);
+    header.appendChild(createChannel);
+
+    return header;
+}

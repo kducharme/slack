@@ -1,17 +1,21 @@
 // Parses the data loaded from firebase
 const databaseParse = (data) => {
     const databaseLoad = require('./databaseLoad');
-    const printChannels = require('./printChannels');
+    const sidebarChannels = require('./sidebarChannels');
     const channels = Object.keys(data);
+    const allData = [];
     channels.forEach(channel => {
         let indivChannel = {
-            name,
-            purpose,
-            messages,
-            
+            name: data[channel].name,
+            purpose: data[channel].purpose,
+            date: data[channel].date,
+            messages: data[channel].messages,
+            users: data[channel].users
         }
+        allData.push(indivChannel)
     })
-    return allTasks;
+    sidebarChannels(allData)
+    return allData;
 }
 
 module.exports = databaseParse;

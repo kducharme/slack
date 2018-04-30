@@ -7,15 +7,16 @@
     --linkColor: #0576b9;
     --sidebarSearchDolor: rgb(52,32,50);
 
-    --primaryFont: 'lato';
+    --primaryFont: 'Lato';
 }
 
 h1, h2, h3, h4, h5, p, a, button {
     font-family: var(--primaryFont);
+    text-decoration: none;
     margin: 0;
 }
 
-button:hover, button:active, button:focus {
+button:hover, button:active, button:focus, a:hover, a:focus {
     cursor: pointer;
     -webkit-transition: none;
     -moz-transition: none;

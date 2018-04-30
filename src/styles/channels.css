@@ -13,20 +13,22 @@
     justify-content: space-between;
     align-items: center;
     height: auto;
+    margin-bottom: 8px;
 }
 
 .sidebar__channels--header > h2 {
     font-size: 1em;
     color: white;
-    font-weight: 200;
-    opacity: .5;
+    font-family: 'Oxygen';
+    font-weight: 200!important;
+    opacity: .7;
 }
 
 .sidebar__channels--header > button {
     background-color: transparent;
     border: none;
     color: white;
-    opacity: .5;
+    opacity: .7;
     padding: 0;
     margin: 0;
 }
@@ -38,6 +40,41 @@
 .sidebar__channels--header > .add-channel {
     font-size: 12px!important;
     padding: 0px!important;
+}
+
+.sidebar__channels--list {
+    display: flex;
+    flex-direction: column;
+}
+
+.individual-channel {
+    display: flex;
+    flex-direction: flex-start;
+    align-items: center;
+    height: 32px;
+    margin: 0 -15px 0 -15px;
+    padding: 0 15px 0 15px;
+}
+
+.individual-channel:hover {
+    cursor: pointer;
+    background-color: #3b2b3a;
+}
+
+.individual-channel > img {
+    margin: 0 5px 0 0;
+    opacity: .5;
+    padding: 0;
+    height: 15px;
+    width: 15px;
+}
+
+.individual-channel > a {
+    font-family: 'Oxygen';
+    font-weight: lighter!important;
+    font-size: 15px;
+    opacity: .7;
+    color: white;
 }
 
 /* Add new channel modal */

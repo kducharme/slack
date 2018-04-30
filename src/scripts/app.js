@@ -1,8 +1,7 @@
+const loadDatabase = require('./databaseLoad');
 const createSidebar = require('./sidebarStructure')
 
-createSidebar();
+loadDatabase();
 
-// const loadDatabase = require('./databaseLoad');
 
-// loadDatabase();
 
