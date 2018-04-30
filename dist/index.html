@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styling/styles.css">
+    <link rel="stylesheet" href="styling/tasks.css">
+    <link rel="stylesheet" href="styling/taskModal.css">
+    <link rel="stylesheet" href="styling/dashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Crimson+Text|Lato" rel="stylesheet">
+
+    <title>Task List</title>
+    <link rel="shortcut icon" type="image" href="img/weblogo.png" />
+
+</head>
+
+<body>
+    <nav>
+        <span class='nav--logo'>
+            <img src='img/weblogo.png'>
+        </span>
+        <a href='index.html' class='active'>
+            <i class="material-icons active" id='home'>home</i>
+        </a>
+        <a href='news.html'>
+            <i class="material-icons">person</i>
+        </a>
+        <i class="material-icons">settings</i>
+    </nav>
+
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBWkRVvXhD1uriMStIvXfdClE8JMfl3dps",
+            authDomain: "task-list-cf398.firebaseapp.com",
+            databaseURL: "https://task-list-cf398.firebaseio.com",
+            projectId: "task-list-cf398",
+            stdorageBucket: "task-list-cf398.appspot.com",
+            messagingSenderId: "285994374260"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src='./bundle.js'></script>
+
+</body>
+
+</html>
