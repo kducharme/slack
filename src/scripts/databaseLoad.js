@@ -4,7 +4,7 @@ const loadDatabase = () => {
         url: 'https://slack-kd.firebaseio.com/channel.json?print=pretty',
         type: "GET",
         success: function (data) {
-            firebaseParse(data)
+            databaseParse(data)
         },
         error: function (error) {
             console.table(error)

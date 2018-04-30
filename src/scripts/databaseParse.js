@@ -1,18 +1,17 @@
-// const firebaseParse = (data) => {
-//     const getFirebaseData = require('./databaseLoad');
-//     const printTasks = require('./printTasks');
-//     let allTasks = []
-//     const keys = Object.keys(data);
-//     keys.forEach(task => {
-//         let individualTask = {
-//             key: task,
-//             title: data[task].title,
-//             details: data[task].details,
-//             priority: data[task].priority,
-//             lane: data[task].lane,
-//         }
-//     })
-//     return allTasks;
-// }
+// Parses the data loaded from firebase
+const databaseParse = (data) => {
+    const databaseLoad = require('./databaseLoad');
+    const printChannels = require('./printChannels');
+    const channels = Object.keys(data);
+    channels.forEach(channel => {
+        let indivChannel = {
+            name,
+            purpose,
+            messages,
+            
+        }
+    })
+    return allTasks;
+}
 
-// module.exports = firebaseParse;
+module.exports = databaseParse;

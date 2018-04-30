@@ -3,6 +3,7 @@
     --accentColor: #4C9689;
     --bodyTextColor: #2c2d30;
     --borderColor: #717274;
+    --inputBorder: #a0a0a2;
     --linkColor: #0576b9;
     --sidebarSearchDolor: rgb(52,32,50);
 
@@ -67,5 +68,14 @@ body {
     border-radius: 5px;
     width: 100%;
     margin: 0 1.25rem;
+}
+
+/* Additional global styles */
+
+.input__label {
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.5rem;
+    margin-bottom: 4px;
 }
 

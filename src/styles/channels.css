@@ -43,6 +43,10 @@
 /* Add new channel modal */
 
 .createChannel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     position: fixed;
     top: 0;
@@ -56,10 +60,69 @@
     height: 100vh;
 }
 
-.createChannel__input {
-    
+.createChannel__content {
+    width: 640px;
 }
 
-.createChannel__button {
+.createChannel__title {
+    display: flex;
+    flex-direction: column;
+}
 
+.createChannel__title > h1 {
+    font-size: 34px;
+    line-height: 41px;
+    font-weight: bolder!important;
+    color: var(--bodyTextColor);
+    margin-bottom: .5rem;
+}
+
+.createChannel__title > p {
+    font-weight: 400;
+    font-size: .9rem;
+    line-height: 1.5rem;
+    color: var(--borderColor);
+    margin-bottom: 2rem;
+}
+
+.createChannel__content--input {
+    border: 1px solid var(--inputBorder);
+    border-radius: .25rem;
+    margin-bottom: 16px;
+    padding-left: 1em;
+    height: 48px;
+    font-size: 18px;
+    width: 100%;
+}
+
+.createChannel__content--input::placeholder {
+    color: var(--inputBorder);
+}
+
+.createChannel__content--actions {
+    display: flex;
+    float: right;
+    margin: 20px -17px;
+}
+
+.createChannel__content--cancel {
+    padding: 6px 15px 6px 15px;
+    border-radius: .25rem;
+    border: .5px solid #e8e8e8;
+    background-color: #f3f3f3;
+    color: var(--bodyTextColor);
+    margin-right: 15px;
+    font-size: 18px;
+    height: 44px;
+}
+
+.createChannel__content--create {
+    font-size: 18px;
+    background-color: #e8e8e8;
+    color: rgba(44,45,48,.75);
+    font-weight: 800;
+    border-radius: .25rem;
+    border: none;
+    padding: 6px 15px 6px 15px;
+    height: 44px;
 }
