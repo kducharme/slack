@@ -1,6 +1,7 @@
 // Creates the structure for the login page
 const loginUserModal = () => {
     const modal = document.createElement('span');
+    modal.setAttribute('id', 'loginModal')
     const body = document.querySelector('body');
     modal.classList.add('login')
     modal.appendChild(loginModalContent());
