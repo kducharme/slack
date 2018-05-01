@@ -4,14 +4,16 @@ const createNewChannel = (e) => {
     const dateGenerator = require('./dateGenerator');
     const name = document.querySelector('#nameInput');
     const purpose = document.querySelector('#purposeInput');
-    const date = dateGenerator();
+    const dateCreated = dateGenerator();
     const users = {};
+    const messages = {};
 
     const channel = {
         name: name.value,
         purpose: purpose.value,
-        date: date,
-        users: users
+        dateCreated: date,
+        users: users,
+        messages: messages
     };
     clearInputs(name.id);
     clearInputs(purpose.id);
