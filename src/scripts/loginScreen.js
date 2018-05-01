@@ -18,6 +18,7 @@ const loginModalContent = () => {
     const createUser = require('./userCreate');
     const titleStructure = loginModalTitle();
 
+    const displayNameInput = inputFactory('text', 'userDisplayName', 'login__input', 'Full name');
     const emailInput = inputFactory('text', 'userEmail', 'login__input', 'you@example.com');
     const passInput = inputFactory('password', 'userPass', 'login__input', 'password');
     const loginButton = buttonFactoryText('login__button','Sign in', loginUser)
@@ -30,6 +31,7 @@ const loginModalContent = () => {
     // Needs refactoring - really repetitive
     contentStructure.classList.add('login__content');
     contentStructure.appendChild(titleStructure);
+    contentStructure.appendChild(displayNameInput);
     contentStructure.appendChild(emailInput);
     contentStructure.appendChild(passInput);
     contentStructure.appendChild(loginButton);

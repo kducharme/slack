@@ -3,9 +3,9 @@ NEEDS:
 - Multi tiers for channel and messages
 */
 
-const firebaseUpdate = (taskUpdate) => {
+const firebaseUpdate = (table, key) => {
     $.ajax({
-        url: `https://slack-kd.firebaseio.com/channel/${taskUpdate.key}.json`,
+        url: `https://slack-kd.firebaseio.com/${table}/${key}.json`,
         type: "PATCH",
         data: JSON.stringify(taskUpdate),
         success: function () {

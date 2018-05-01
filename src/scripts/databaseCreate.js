@@ -1,6 +1,7 @@
 /*
 NEEDS:
 - Multi tiers for channel and messages
+
 */
 
 const databaseCreate = (channel) => {

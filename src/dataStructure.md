@@ -1,32 +1,32 @@
 # Data Needs / Structure
 
-userList = [];
-
 user = {
-    firstName: 'Kyle',
-    lastName: 'Ducharme',
+    key: 'AIzaSyBDyaekgARRIZDbPacnvz6W9ScYTWvcHz4'
+    email: 'ducharme.kyle@gmail.com'
     img: 'img/kducharme.png',
-    username: 'ducharme.kyle@gmail.com'
-    channels: ['watercooler', 'marketing'];
-    messages: ['Hello world!']
+    displayName: 'Kyle Ducharme'
 }
 
-channelList = [];
-
 channel = {
+    key: '-LBN5YuKEmrwVE6sRIH1'
     name: 'Watercooler',
     purpose: 'To discuss cool things',
     dateCreated: 'April 30, 2018'
-    users: [username, username, etc.],
-    messages: ['Hello world!', 'Waddup bro'];
+    users: {
+        displayName,
+        userKey,
+        img,
+        email
+        }
 }
 
-messageList = [];
-
 message = {
-    channel: 'Watercooler'
+    messageKey: '-LBN5ZmhTVh-tT_gCdR3'
+    channelKey: '-LBN5YuKEmrwVE6sRIH1'
+    userKey: 'AIzaSyBDyaekgARRIZDbPacnvz6W9ScYTWvcHz4',
     date: 'April 30, 2018',
-    username: 'ducharme.kyle@gmail.com',
+    displayName: 'Kyle Ducharme',
     text: 'Hello world!',
     media: 'img/thailand.png'
 }
+

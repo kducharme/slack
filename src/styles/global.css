@@ -36,7 +36,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--primaryColor);
-    flex-basis: 220px;
+    flex-basis: 200px;
     max-width: 220px;
     padding: 50px 15px 0 15px;
 }

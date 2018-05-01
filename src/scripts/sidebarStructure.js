@@ -5,9 +5,10 @@ const createSidebar = (channelComponent) => {
     const logOut = document.createElement('button');
     logOut.addEventListener('click', logoutUser);
     logOut.textContent = 'Log out'
+    logOut.classList.add('logout__button')
 
     sidebar.appendChild(channelComponent);
     sidebar.appendChild(logOut);
-}
+} 
 
 module.exports = createSidebar;
