@@ -1,7 +1,6 @@
+// Clears fields after submission of a form/input
 const clearInputs = (identifier) => {
-    for(let i = 0; i < identifier.length; i++) {
-        identifier[i].value = '';
-    }
+    document.querySelector(`#${identifier}`).value = ''
 }
 
 module.exports = clearInputs;
