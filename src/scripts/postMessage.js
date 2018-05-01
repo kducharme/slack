@@ -2,15 +2,32 @@ const postMessage = () => {
     const getCurrentUser = require('./userCheck').getCurrentUser;
     const getCurrentChannel = require('./channelCheck').getCurrentChannel;
     const messageFactory = require('./messageFactory')
+    const clearInputs = require('./clearInputs')
+    const addMessageToChannel = require('./databaseAddMessage').addMessageToChannel;
+    const addMessage = require('./databaseAddMessage').addMessage;
+    const dateGenerator = require('./dateGenerator');
     const message = document.querySelector('#writeMessage').value
     const postArea = document.querySelector('.messages');
     const user = getCurrentUser()
+    const userID = user.uid;
     const channel = getCurrentChannel();
+    const media = '';
 
-    const messageStructure = messageFactory(message, user, Date)
+    const messageStructure = messageFactory(message, user)
+    const date = dateGenerator();
 
     postArea.appendChild(messageStructure);
+    clearInputs('writeMessage')
 
+    const newMessage = {
+        channel,
+        user: userID,
+        date,
+        message,
+        media
+    }
+    addMessageToChannel(newMessage)
+    addMessage(newMessage)
 }
 
 const submitMessage = document.querySelector('#writeMessage').addEventListener('keypress', e => {

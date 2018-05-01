@@ -5,6 +5,7 @@ const messageFactory = (m, user) => {
     const title = messageTitle(user);
     message.appendChild(title);
     const text = document.createElement('p');
+    text.classList.add('message__body');
     text.textContent = m;
     message.appendChild(text);
 

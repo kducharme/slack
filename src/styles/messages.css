@@ -1,17 +1,31 @@
 .message {
     display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .message__title {
     display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
 }
 
 .message__title--user {
+    color: var(--bodyTextColor);
     font-weight: 800;
     font-size: 16px;
+    margin-right: 5px;
 }
 
 .message__title--date {
+    color: var(--borderColor);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.message__body {
+    color: var(--bodyTextColor);
     font-weight: 400;
     font-size: 14px;
+    line-height: .5rem;
 }
