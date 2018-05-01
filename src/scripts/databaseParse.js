@@ -4,13 +4,14 @@ const databaseParse = (data) => {
     const sidebarChannels = require('./sidebarChannels');
     const channels = Object.keys(data);
     const allData = [];
-    channels.forEach(channel => {
+    channels.forEach(key => {
         let indivChannel = {
-            name: data[channel].name,
-            purpose: data[channel].purpose,
-            date: data[channel].date,
-            messages: data[channel].messages,
-            users: data[channel].users
+            key,
+            name: data[key].name,
+            purpose: data[key].purpose,
+            date: data[key].date,
+            messages: data[key].messages,
+            users: data[key].users
         }
         allData.push(indivChannel)
     })

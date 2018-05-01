@@ -77,6 +77,14 @@
     color: white;
 }
 
+.activeChannel {
+    background-color: var(--accentColor)!important;
+}
+
+.logout__button {
+    margin-top: 50px;
+}
+
 /* Add new channel modal */
 
 .createChannel {

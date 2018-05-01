@@ -1,21 +1,22 @@
 const createNewChannel = (e) => {
-    const clearInputs = require('./clearInputs')
-    const databaseCreate = require('./databaseCreate')
-    const dateGenerator = require('./dateGenerator')
-    const name = e.path[2].childNodes[2].value;
-    const purpose = e.path[2].childNodes[4].value;
-    const date = dateGenerator();
-    const users = [];
-    const messages = [];
+    const clearInputs = require('./clearInputs');
+    const databaseCreate = require('./databaseCreate');
+    const dateGenerator = require('./dateGenerator');
+    const name = document.querySelector('#nameInput');
+    const purpose = document.querySelector('#purposeInput');
+    const dateCreated = dateGenerator();
+    const users = {};
+    const messages = {};
 
     const channel = {
-        name,
-        purpose,
-        date,
-        users,
-        messages
+        name: name.value,
+        purpose: purpose.value,
+        dateCreated: date,
+        users: users,
+        messages: messages
     };
-    clearInputs(channelInput);
+    clearInputs(name.id);
+    clearInputs(purpose.id);
     databaseCreate(channel);
 }
 

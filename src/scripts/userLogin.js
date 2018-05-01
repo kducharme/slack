@@ -7,6 +7,7 @@ const loginUser = () => {
 
     clearInputs('userEmail')
     clearInputs('userPass')
+    clearInputs('userDisplayName')
 
     const promise = auth.signInWithEmailAndPassword(email, pass);
     promise.catch(e => console.log(e.message))

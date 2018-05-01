@@ -1,13 +1,8 @@
-/*
-NEEDS:
-- Multi tiers for channel and messages
-*/
-
-const firebaseUpdate = (taskUpdate) => {
+const updateDatabaseChannel = (channel, user) => {
     $.ajax({
-        url: `https://slack-kd.firebaseio.com/channel/${taskUpdate.key}.json`,
+        url: `https://slack-kd.firebaseio.com/${channel.table}/${channel.channelName}/users/${user.id}.json`,
         type: "PATCH",
-        data: JSON.stringify(taskUpdate),
+        data: JSON.stringify(user),
         success: function () {
         },
         error: function (error) {
@@ -16,4 +11,4 @@ const firebaseUpdate = (taskUpdate) => {
     });
 }
 
-module.exports = firebaseUpdate;
+module.exports = updateDatabaseChannel;

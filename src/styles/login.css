@@ -89,3 +89,9 @@
     text-decoration: underline!important;
     cursor: pointer;
 }
+
+/* Hides login screen if user logged in*/
+
+.hide {
+    display: none!important;
+}

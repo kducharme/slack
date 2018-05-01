@@ -29,8 +29,8 @@ const createChannelContent = () => {
     const nameLabel = inputLabelFactory('Name');
     const purposeLabel = inputLabelFactory('Purpose');
 
-    const nameInput = inputFactory('text', 'channelInput', 'createChannel__content--input', 'e.g. marketing');
-    const purposeInput = inputFactory('text', 'channelInput', 'createChannel__content--input', `Enter channel purpose..`);
+    const nameInput = inputFactory('text', 'nameInput', 'createChannel__content--input', 'e.g. marketing');
+    const purposeInput = inputFactory('text', 'purposeInput', 'createChannel__content--input', `Enter channel purpose..`);
 
     const modalActions = document.createElement('span');
     modalActions.classList.add('createChannel__content--actions')
