@@ -1,12 +1,11 @@
 // Checking whether or not user is logged in
-
-let userID = null;
+let currentUser = null;
 
 const auth = firebase.auth();
 auth.onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
         console.log(firebaseUser.uid)
-        userID = firebaseUser.uid; // check this
+        currentUser = firebaseUser;
         const loginModal = document.querySelector('#loginModal');
         loginModal.classList.add('hide');
     }
@@ -16,15 +15,15 @@ auth.onAuthStateChanged(firebaseUser => {
     }
 })
 
-const getUserID = () => {
-    return userID;
+const getCurrentUser = () => {
+    return currentUser;
 }
 
-const setUserID = (id) => {
-    userID = id;
+const setCurrentUser = (user) => {
+    currentUser = user;
 }
 
 module.exports = {
-    getUserID,
-    setUserID
+    getCurrentUser,
+    setCurrentUser
 };

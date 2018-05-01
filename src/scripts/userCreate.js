@@ -1,7 +1,7 @@
 // Lets user create new account
 const createUser = () => {
     const addToDefaultChannel = require('./addToChannel')
-    const setUserID = require('./userCheck').setUserID
+    const setCurrentUser = require('./userCheck').setCurrentUser
     const clearInputs = require('./clearInputs');
     const email = document.querySelector('#userEmail').value;
     const displayName = document.querySelector('#userDisplayName').value;
@@ -13,7 +13,7 @@ const createUser = () => {
     clearInputs('userDisplayName')
 
     const promise = auth.createUserWithEmailAndPassword(email, pass).then((user) => {
-        setUserID(user.uid)
+        setCurrentUser(user)
         addToDefaultChannel(user)
     })
     promise.catch(e => console.log(e.message))

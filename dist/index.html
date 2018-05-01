@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/channels.css">
     <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/messages.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Lato|Oxygen" rel="stylesheet">
 
     <title>Slack</title>
@@ -25,8 +26,10 @@
         <div class='messages'>
         </div>
 
-        <div class='create'>
-            <input class='create__input' id='writeMessage'>
+        <div class='write'>
+            <button class='write__upload' id='uploadFile'><i class="material-icons">add</i>
+            </button>
+            <input class='write__input' id='writeMessage' placeholder='Write message'>
         </div>
 
     </div>

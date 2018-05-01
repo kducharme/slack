@@ -1,4 +1,5 @@
 const changeChannel = (evt) => {
+    const setCurrentChannel = require('./channelCheck').setCurrentChannel;
     const allChannels = document.querySelectorAll('.individual-channel');
     let clickedChannel = evt.target
 
@@ -11,6 +12,7 @@ const changeChannel = (evt) => {
         }
     }
     clickedChannel.classList.add('activeChannel')
+    setCurrentChannel(clickedChannel.id)
 }
 
 module.exports = changeChannel;

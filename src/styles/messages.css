@@ -1,0 +1,17 @@
+.message {
+    display: flex;
+}
+
+.message__title {
+    display: flex;
+}
+
+.message__title--user {
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.message__title--date {
+    font-weight: 400;
+    font-size: 14px;
+}
