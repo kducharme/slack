@@ -1,13 +1,20 @@
 // Factory for creating messages
 const messageFactory = (m, user) => {
     const message = document.createElement('span');
-    message.classList.add('message')
+    const body = document.createElement('span');
+    body.classList.add('message__right')
     const title = messageTitle(user);
-    message.appendChild(title);
+    const avatar = messageAvatar();
+    message.classList.add('message')
     const text = document.createElement('p');
     text.classList.add('message__body');
     text.textContent = m;
-    message.appendChild(text);
+    
+    body.appendChild(title)
+    body.appendChild(text)
+    
+    message.appendChild(avatar)
+    message.appendChild(body);
 
     return message;
 }
@@ -28,6 +35,13 @@ const messageTitle = (u) => {
     messageTitle.appendChild(date)
     
     return messageTitle;
+}
+
+const messageAvatar = () => {
+    const avatar = document.createElement('img');
+    avatar.src = 'img/avatar.png'
+    avatar.classList.add('messages__avatar')
+    return avatar
 }
 
 module.exports = messageFactory;

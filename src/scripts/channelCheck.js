@@ -1,9 +1,10 @@
 // Checking what channel the user is currently in
 let currentChannel = null;
 
-const setCurrentChannel = (user) => {
-    currentChannel = user;
-    console.log(currentChannel)
+const setCurrentChannel = (channel) => {
+    const channelDetails = require('./channelDetails').channelDetails;
+    currentChannel = channel;
+    channelDetails();
 }
 
 const getCurrentChannel = () => {
