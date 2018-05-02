@@ -5,7 +5,8 @@ const sidebarChannels = (allData) => {
     const sidebarStructure = require('./sidebarStructure');
     const changeChannel = require('./changeChannel');
     const header = channelsHeader();
-    
+
+
     allData.forEach(c => {
         const channelRow = document.createElement('span');
         channelRow.setAttribute('id', c.key)
@@ -23,19 +24,17 @@ const sidebarChannels = (allData) => {
         channelList.appendChild(channelRow);
     })
     channelList.classList = 'sidebar__channels--list';
-    
+
     channelComponent.appendChild(header);
     channelComponent.appendChild(channelList);
 
     sidebarStructure(channelComponent)
 }
 
-module.exports = sidebarChannels;
 
 const channelsHeader = () => {
     const buttonFactory = require('./buttonFactoryIcon');
     const newChannelModal = require('./newChannelModal');
-
     const header = document.createElement('span');
     header.classList = 'sidebar__channels--header'
     const title = document.createElement('h2');
@@ -46,3 +45,5 @@ const channelsHeader = () => {
 
     return header;
 }
+
+module.exports = sidebarChannels;

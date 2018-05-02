@@ -1,8 +1,8 @@
-const loadDatabase = require('./databaseLoad');
+const loadDB = require('./databaseLoad').loadDatabase;
 const loginUserModal = require('./loginScreen');
 // const channelDetails = require('./channelDetails').channelDetails;
 
-loadDatabase();
+loadDB();
 loginUserModal();
 // channelDetails();
 

@@ -12,6 +12,7 @@
 }
 
 .options__channel {
+    font-family: var(--primaryFont);
     font-size: 18px;
     font-weight: 800;
     margin-bottom: 4px;
