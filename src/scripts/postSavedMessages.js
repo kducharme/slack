@@ -8,6 +8,7 @@ const postMessage = (allMessages) => {
         const messageStructure = messageFactory(m, u)
         postArea.appendChild(messageStructure);
     })
+    postArea.scrollTop = 9999;
 }
 
 module.exports = postMessage;

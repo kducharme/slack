@@ -1,10 +1,15 @@
-const keepMessagesBottom = () => {
-    console.log('hi')
-    let messageBody = document.querySelector('#messages');
-    console.log(messageBody.scrollHeight)
-    messageBody.scrollTop = messageBody.scrollHeight;
-}
+// const keepMessagesBottom = () => {
+//     console.log('hi')
+//     let messageBody = document.querySelector('#messages');
+//     console.log(messageBody.scrollHeight)
+//     messageBody.scrollTop = 9999;
+// }
 
-window.onload = keepMessagesBottom();
+// window.onload = function(){
+//     setTimeout(function(){
+//         console.log('hi')
+//         keepMessagesBottom();
+//     }, 200);
+//  };
 
-module.exports = keepMessagesBottom;
+// module.exports = keepMessagesBottom;

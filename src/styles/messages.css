@@ -1,7 +1,7 @@
 .message {
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
     width: 80%;
 }
 
@@ -13,7 +13,7 @@
 .message__title {
     display: flex;
     align-items: baseline;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .message__title--user {
@@ -30,8 +30,8 @@
 }
 
 .messages__avatar {
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     margin: 5px 10px;
 
 }

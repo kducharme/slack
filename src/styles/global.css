@@ -52,7 +52,7 @@ body {
 .messages {
     height: 88%;
     overflow: scroll;
-    padding: 30px 30px 0 30px;
+    padding: 20px 30px 0 30px;
 }
 
 .write {
