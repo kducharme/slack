@@ -1,3 +1,42 @@
+.sidebar__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+    margin: 0px -15px 0 -15px;
+    padding: 15px 15px 15px 15px;
+}
+
+.sidebar__header:hover {
+    cursor: pointer;
+    background-color: #253140;
+}
+
+.sidebar__header--name {
+    width: 80%!important;
+    text-overflow: ellipsis;
+    padding: -10px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: var(--primaryFont);
+    font-weight: 700;
+    color: white;
+    font-size: 17px;
+}
+
+.sidebar__header--icon {
+    height: 15px;
+}
+
+.drop {
+    width: 30px!important;
+    font-size: 20px!important;
+    margin: 0!important;
+    padding: 0!important;
+    color: white!important;
+    height: 0!important;
+}
+
 /* Channels section on sidebar */
 
 .sidebar__channels {
@@ -14,6 +53,7 @@
     align-items: center;
     height: auto;
     margin-bottom: 8px;
+    margin-top: 30px;
 }
 
 .sidebar__channels--header > h2 {
