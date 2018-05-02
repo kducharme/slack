@@ -1,5 +1,5 @@
 :root {
-    --primaryColor: #4d394b;
+    --primaryColor: #2F3E50;
     --accentColor: #4C9689;
     --bodyTextColor: #2c2d30;
     --borderColor: #717274;
@@ -33,6 +33,11 @@ body {
     width: 100vw;
 }
 
+body::-webkit-scrollbar-thumb {
+    width: 1em;
+    background-color: #E8E8E8!important;
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -60,7 +65,7 @@ body {
     position: relative;
     min-height: 42px;
     max-height: none;
-    margin: 0 1.25rem;
+    margin: 0 30px 0px 30px;
     padding-bottom: 25px!important;
 }
 

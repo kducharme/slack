@@ -58,7 +58,7 @@
 
 .individual-channel:hover {
     cursor: pointer;
-    background-color: #3b2b3a;
+    background-color: #253140;
 }
 
 .individual-channel > img {
@@ -70,8 +70,7 @@
 }
 
 .individual-channel > a {
-    font-family: 'Oxygen';
-    font-weight: lighter!important;
+    font-weight: 400!important;
     font-size: 15px;
     opacity: .7;
     color: white;

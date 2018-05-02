@@ -13,13 +13,14 @@
 .message__title {
     display: flex;
     align-items: baseline;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .message__title--user {
+    font-family: 'Lato'!important;
     color: var(--bodyTextColor);
-    font-weight: 800;
-    font-size: 16px;
+    font-weight: 900!important;
+    font-size: 15px;
     margin-right: 5px;
 }
 
@@ -32,7 +33,7 @@
 .messages__avatar {
     height: 35px;
     width: 35px;
-    margin: 5px 10px;
+    margin: 5px 10px 0 0;
 
 }
 
