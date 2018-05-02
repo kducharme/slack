@@ -2,7 +2,9 @@
 let currentChannel = null;
 
 const setCurrentChannel = (channel) => {
+    const channelDetails = require('./channelDetails').channelDetails;
     currentChannel = channel;
+    channelDetails();
 }
 
 const getCurrentChannel = () => {
