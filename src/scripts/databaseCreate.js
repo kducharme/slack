@@ -1,9 +1,4 @@
-/*
-NEEDS:
-- Multi tiers for channel and messages
-
-*/
-
+// creates a new channel in firebase
 const databaseCreate = (channel) => {
     $.ajax({
         url: 'https://slack-kd.firebaseio.com/channel.json',
