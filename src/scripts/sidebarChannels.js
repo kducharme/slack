@@ -9,6 +9,7 @@ const sidebarChannels = (allData) => {
     allData.forEach(c => {
         const channelRow = document.createElement('span');
         channelRow.setAttribute('id', c.key)
+        channelRow.setAttribute('data-prupise', c.purpose);
         channelRow.addEventListener('click', changeChannel)
         channelRow.classList = 'individual-channel'
         const hash = document.createElement('img');

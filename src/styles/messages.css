@@ -1,7 +1,13 @@
 .message {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
     margin-bottom: 20px;
+    width: 80%;
+}
+
+.message__right {
+    display: flex;
+    flex-direction: column;
 }
 
 .message__title {
@@ -23,9 +29,16 @@
     font-size: 12px;
 }
 
+.messages__avatar {
+    height: 30px;
+    width: 30px;
+    margin: 5px 10px;
+
+}
+
 .message__body {
     color: var(--bodyTextColor);
     font-weight: 400;
     font-size: 14px;
-    line-height: .5rem;
+    line-height: 1.6;
 }

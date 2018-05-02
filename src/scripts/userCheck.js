@@ -4,7 +4,6 @@ let currentUser = null;
 const auth = firebase.auth();
 auth.onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
-        console.log(firebaseUser.uid)
         currentUser = firebaseUser;
         const loginModal = document.querySelector('#loginModal');
         loginModal.classList.add('hide');

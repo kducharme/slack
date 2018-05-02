@@ -2,14 +2,20 @@
 // Currently loads the watercooler channel by default
 const loadDefaultChannel = () => {
     const setCurrentChannel = require('./channelCheck').setCurrentChannel;
-    const firstChannel = document.querySelectorAll('.individual-channel')[0]
-    console.log
+    const channelDetailsLeft = require('./channelDetails').channelDetailsLeft;
+    const channelDetails = require('./channelDetails').channelDetails;
+    const firstChannel = document.querySelector('.sidebar__channels--list').childNodes[0]
     firstChannel.classList.add('activeChannel')
-    setCurrentChannel(firstChannel.id)
+    setCurrentChannel(firstChannel)
+    channelDetails()
 }
 
+// window.addEventListener('load', (function() {setTimeout(function(){ loadDefaultChannel; }, 1000))};
+
+window.onload = function(){
+    setTimeout(function(){
+        loadDefaultChannel();
+    }, 100);
+ };
+
 module.exports = loadDefaultChannel;
-
-
-// BUG: Need to refactor this - sometimes does not work
-window.addEventListener('load', loadDefaultChannel);
