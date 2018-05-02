@@ -1,3 +1,4 @@
+// Appends new message to #message div in DOM
 const postMessage = (allMessages) => {
     const messageFactory = require('./messageFactory')
     const postArea = document.querySelector('.messages');

@@ -66,7 +66,7 @@
     color: var(--inputBorder);
 }
 
-.login__button {
+.signup__button {
     margin-top: 10px;
     font-size: 18px;
     background-color: #008952;
@@ -79,13 +79,13 @@
     width: 65%;
 }
 
-.signup__button {
+.login__button {
     color: var(--linkColor);
     padding-top: 20px;
     font-size: 15px;
 }
 
-.signup__button:hover {
+.login__button:hover {
     text-decoration: underline!important;
     cursor: pointer;
 }

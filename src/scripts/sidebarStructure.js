@@ -1,5 +1,5 @@
+// Creates the structure for the sidebar
 const createSidebar = (channelComponent) => {
-    // resetSidebar()
     const sidebar = document.querySelector('.sidebar');
     const sidebarChannels = require('./sidebarChannels');
     const logoutUser = require('./userLogout');
@@ -14,5 +14,3 @@ const createSidebar = (channelComponent) => {
 } 
 
 module.exports = createSidebar;
-
-

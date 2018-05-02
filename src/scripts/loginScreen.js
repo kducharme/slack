@@ -21,12 +21,12 @@ const loginModalContent = () => {
     const displayNameInput = inputFactory('text', 'userDisplayName', 'login__input', 'Full name');
     const emailInput = inputFactory('text', 'userEmail', 'login__input', 'you@example.com');
     const passInput = inputFactory('password', 'userPass', 'login__input', 'password');
-    const loginButton = buttonFactoryText('login__button','Sign in', loginUser)
+    const signUpButton = buttonFactoryText('signup__button','Create account', createUser)
 
-    const signUpButton = document.createElement('p');
-    signUpButton.textContent = 'Or, create a new account'
-    signUpButton.classList.add('signup__button');
-    signUpButton.addEventListener('click', createUser);
+    const loginButton = document.createElement('p');
+    loginButton.textContent = 'Or, sign in to existing account'
+    loginButton.classList.add('login__button');
+    loginButton.addEventListener('click', loginUser);
 
     // Needs refactoring - really repetitive
     contentStructure.classList.add('login__content');
@@ -34,8 +34,8 @@ const loginModalContent = () => {
     contentStructure.appendChild(displayNameInput);
     contentStructure.appendChild(emailInput);
     contentStructure.appendChild(passInput);
-    contentStructure.appendChild(loginButton);
     contentStructure.appendChild(signUpButton);
+    contentStructure.appendChild(loginButton);
 
     return contentStructure;
 }
