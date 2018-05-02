@@ -20,8 +20,8 @@ const postMessage = () => {
     clearInputs('writeMessage')
 
     const newMessage = {
-        channel,
-        user: userID,
+        channel: channel.id,
+        user,
         date,
         message,
         media

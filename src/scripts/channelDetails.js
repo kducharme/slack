@@ -15,7 +15,6 @@ const clearChannel = () => {
             c.removeChild(c.firstChild);
         }
     })
-    console.log(channel)
 }
 
 const channelDetailsLeft = () => {

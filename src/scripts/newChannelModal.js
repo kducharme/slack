@@ -1,6 +1,7 @@
 // Creates the structure for the new channel modal
 const newChannelModal = () => {
     const modal = document.createElement('span');
+    modal.setAttribute('id','channelModal')
     const modalContent = createChannelContent();
     const body = document.querySelector('body');
     modal.classList.add('createChannel')
@@ -10,11 +11,6 @@ const newChannelModal = () => {
 
 module.exports = newChannelModal;
 
-// Hides create new channel modal
-const hideCreateNewChannel = () => {
-    // console.log('hi')
-}
-
 // Creates the content for the create new channel modal
 const createChannelContent = () => {
     const contentStructure = document.createElement('span');
@@ -22,7 +18,8 @@ const createChannelContent = () => {
     const buttonFactoryText = require('./buttonFactoryText');
     const inputLabelFactory = require('./inputLabelFactory');
     const databaseCreate = require('./databaseCreate');
-    const createNewChannel = require('./createNewChannel');
+    const createNewChannel = require('./createNewChannel').createNewChannel;
+    const closeCreateNewModal = require('./createNewChannel').closeCreateNewModal;
     contentStructure.classList.add('createChannel__content')
     const titleStructure = modalTitle();
 
@@ -34,7 +31,7 @@ const createChannelContent = () => {
 
     const modalActions = document.createElement('span');
     modalActions.classList.add('createChannel__content--actions')
-    const cancelButton = buttonFactoryText('createChannel__content--cancel','Cancel', hideCreateNewChannel)
+    const cancelButton = buttonFactoryText('createChannel__content--cancel','Cancel', closeCreateNewModal)
     const createButton = buttonFactoryText('createChannel__content--create','Create channel', createNewChannel)
 
     modalActions.appendChild(cancelButton)
