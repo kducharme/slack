@@ -6,3 +6,5 @@ Rebuilding Slack's web app experience to learn and practice web sockets, user ma
 1. CRUD messages (text, video)
 1. View when other users are typing
 1. Search messages
+
+Most recent live version can be viewed here (note: this is not responsive yet): https://slack-kd.firebaseapp.com
