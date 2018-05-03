@@ -5,7 +5,6 @@ const postMessage = (allMessages) => {
     allMessages.forEach(mess => {
         const date = mess.date;
         const message = mess;
-        console.log(mess)
         const messageStructure = messageFactory(date, message)
         postArea.appendChild(messageStructure);
     })

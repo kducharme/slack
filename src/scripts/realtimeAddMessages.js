@@ -1,47 +1,56 @@
+// NOT WORKING -- NEED TO FIX
 
-const realtimeAddMessages = (channel) => {
-    let databaseRef = firebase.database().ref().child('channel').child(channel).child('messages');
-
+// Listening for updates in the database to post to DOM for all users
+const realtimeAddMessages = () => {
+    let databaseRef = firebase.database().ref(`channel/`);
     databaseRef.on('value', snap => {
+        const getCurrentChannel = require('./channelCheck').getCurrentChannel;
+        const channel = getCurrentChannel();
         const messages = snap.val();
         const keyArray = Object.keys(messages)
+        const newMessage = messages.channel.messages
         const allMessages = [];
         keyArray.forEach(key => {
             let indivMessage = {
                 key,
                 user: messages[key].user,
                 date: messages[key].date,
-                text: messages[key].message,
+                text: messages[key].text,
                 media: messages[key].media
             }
             allMessages.push(indivMessage)
         })
-        const newMessage = allMessages.pop()
-        verifyUser(newMessage);
+        verifyUser(newMessage)
+        postNewUserMessage(channel, newMessage);
     })
 }
 
 const verifyUser = (newMessage) => {
+    console.log(newMessage)
     const getCurrentUser = require('./userCheck').getCurrentUser;
-    const userThatPostedMessage = newMessage.user.uid;
+    const userThatPostedMessage = newMessage.user;
     const currentUser = getCurrentUser().uid;
-    
+
+    console.log(userThatPostedMessage, currentUser)
+
     if (userThatPostedMessage !== currentUser) {
-        postNewUserMessage(newMessage)
+        // postNewUserMessage(newMessage)
+        console.log('same user')
     }
     else {
         console.log('same user')
     }
 }
 
-const postNewUserMessage = (newMessage) => {
-    const postArea = document.querySelector('.messages');
-    const postDate = newMessage.date;
-    const messageFactory = require('./messageFactory')
-    const messageStructure = messageFactory(postDate, newMessage)
-    postArea.appendChild(messageStructure);
+// const postNewUserMessage = (channel) => {
+//     const loadMessages = require('./databaseLoad').loadMessages;
+//     const printArea = document.querySelectorAll('#messages');
+//     printArea.forEach(m => {
+//         while (m.firstChild) {
+//             m.removeChild(m.firstChild);
+//         }
+//     })
+//     loadMessages(channel);
+// }
 
-    console.log('success')
-}
-
-module.exports = realtimeAddMessages;
+// module.exports = realtimeAddMessages;

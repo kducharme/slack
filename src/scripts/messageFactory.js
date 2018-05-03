@@ -8,7 +8,6 @@ const messageFactory = (date, message) => {
     messageStructure.classList.add('message')
     const text = document.createElement('p');
 
-    console.log(message)
     text.classList.add('message__body');
     text.textContent = message.text;
     
