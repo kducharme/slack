@@ -9,7 +9,6 @@ const postMessage = () => {
     const keepMessagesBottom = require('./keepMessagesBottom');
     const dateGenerator = require('./dateGenerator');
     const text = document.querySelector('#writeMessage').value
-    console.log(text)
     const postArea = document.querySelector('.messages');
     const user = getCurrentUser()
     const userID = user.uid;

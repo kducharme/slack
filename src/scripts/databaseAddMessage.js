@@ -18,7 +18,6 @@ const addMessage = (message) => {
         type: "POST",
         data: JSON.stringify(message),
         success: function () {
-            realtimeAddMessages(message.channel)
         },
         error: function (error) {
             console.table('error: ' + error)

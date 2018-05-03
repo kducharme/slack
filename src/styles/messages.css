@@ -4,6 +4,10 @@
     margin-bottom: 17px;
 }
 
+.message__newUser {
+    opacity: .6;
+}
+
 .message__right {
     display: flex;
     flex-direction: column;

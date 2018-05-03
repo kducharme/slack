@@ -1,14 +1,37 @@
-// Factory for creating messages
-const messageFactory = (date, message) => {
+const newUserAddedToChannel = (user) => {
+    const dateGenerator = require('./dateGenerator');
+    const postArea = document.querySelector('.messages');
+    const addMessageToChannel = require('./databaseAddMessage').addMessageToChannel;
+    const addMessage = require('./databaseAddMessage').addMessage;
+    const channel = 'watercooler';
+    const text = `joined #${channel}`
+    
+    const date = dateGenerator();
+    const media = '';
+
+    const newMessage = {
+        channel: '-LBN5_skx51L7hJQp5R1',
+        user,
+        date,
+        text,
+        media
+    }
+    const messageStructure = createNotification(date, newMessage)
+    postArea.appendChild(messageStructure);
+    addMessageToChannel(newMessage)
+    addMessage(newMessage)
+}
+
+const createNotification = (date, message) => {
     const messageStructure = document.createElement('span');
     const body = document.createElement('span');
     body.classList.add('message__right')
-    const title = messageTitle(date, message.user.email);
-    const avatar = messageAvatar();
+    const title = notificationTitle(date, message.user.email);
+    const avatar = notificationAvatar();
     messageStructure.classList.add('message')
     const text = document.createElement('p');
 
-    text.classList.add('message__body');
+    text.classList.add('message__body', 'message__newUser');
     text.textContent = message.text;
     
     body.appendChild(title)
@@ -20,9 +43,7 @@ const messageFactory = (date, message) => {
     return messageStructure;
 }
 
-// TODO: swap email w/ displayName
-// TODO: date needs to display for date posted if message already exists
-const messageTitle = (date, user) => {
+const notificationTitle = (date, user) => {
     const messageTitle = document.createElement('span');
     messageTitle.classList.add('message__title')
     const displayName = document.createElement('p')
@@ -37,11 +58,11 @@ const messageTitle = (date, user) => {
     return messageTitle;
 }
 
-const messageAvatar = () => {
+const notificationAvatar = () => {
     const avatar = document.createElement('img');
     avatar.src = 'img/avatar.png'
     avatar.classList.add('messages__avatar')
     return avatar
 }
 
-module.exports = messageFactory;
+module.exports = newUserAddedToChannel;
