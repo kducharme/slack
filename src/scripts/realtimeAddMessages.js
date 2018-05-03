@@ -26,13 +26,9 @@ const realtimeAddMessages = () => {
 }
 
 const verifyUser = (newMessage) => {
-    console.log(newMessage)
     const getCurrentUser = require('./userCheck').getCurrentUser;
     const userThatPostedMessage = newMessage.user;
     const currentUser = getCurrentUser().uid;
-
-    console.log(userThatPostedMessage, currentUser)
-
     if (userThatPostedMessage !== currentUser) {
         // postNewUserMessage(newMessage)
         console.log('same user')

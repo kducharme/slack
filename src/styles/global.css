@@ -45,6 +45,7 @@ body::-webkit-scrollbar-thumb {
     flex-basis: 200px;
     max-width: 220px;
     padding: 0px 12px 0 12px;
+    overflow: scroll;
 }
 
 .content {
@@ -75,8 +76,20 @@ body::-webkit-scrollbar-thumb {
     padding: 0!important;
     opacity: .5;
     border-radius: 6px 0 0 6px;;
-    width: 5%;
+    width: 50px!important;
     z-index: 1;
+}
+
+.write__upload--add {
+    margin-left:2px!important;
+}
+
+.write__upload:hover {
+    cursor: pointer;
+    background-color: #0fb673;
+    border: 2px solid #008952;
+    opacity: 1;
+    color: white;
 }
 
 .write__input {

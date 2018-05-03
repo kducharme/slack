@@ -2,6 +2,7 @@
 const sidebarChannels = (allData) => {
     const channelComponent = document.createElement('span');
     const channelList = document.createElement('span');
+    const sidebarUsers = require('./sidebarUsers');
     const sidebarStructure = require('./sidebarStructure');
     const changeChannel = require('./changeChannel');
     const header = channelsHeader();
@@ -29,6 +30,7 @@ const sidebarChannels = (allData) => {
     channelComponent.appendChild(channelList);
 
     sidebarStructure(channelComponent)
+    sidebarUsers(allData)
 }
 
 const channelsHeader = () => {

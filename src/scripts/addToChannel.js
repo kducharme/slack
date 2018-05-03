@@ -1,5 +1,4 @@
 const addToDefaultChannel = (newUser) => {
-    console.log(newUser)
     const database = require('./databaseUpdate');
     const table = 'channel';
     const channelName = '-LBN5_skx51L7hJQp5R1';
