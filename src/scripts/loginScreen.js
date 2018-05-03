@@ -45,7 +45,7 @@ const loginModalTitle = () => {
     const title = document.createElement('h1');
     const description = document.createElement('p');
     title.textContent = 'Sign in to slack';
-    description.textContent = 'Get started collabroating with your teammates.';
+    description.textContent = 'Get started collaborating with your teammates.';
     titleStructure.classList.add('login__title');
     titleStructure.appendChild(title);
     titleStructure.appendChild(description);
