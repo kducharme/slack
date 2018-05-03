@@ -5,12 +5,7 @@
 }
 
 .message__newUser {
-    font-family: 'Lato'!important;
-    color: var(--bodyTextColor);
     opacity: .6;
-    font-weight: 400!important;
-    font-size: 14px;
-    margin-right: 5px;
 }
 
 .message__right {
