@@ -5,8 +5,10 @@ const auth = firebase.auth();
 auth.onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
         currentUser = firebaseUser;
+        const sidebarHead = require('./sidebarHead');
         const loginModal = document.querySelector('#loginModal');
         loginModal.classList.add('hide');
+        sidebarHead(currentUser);
     }
     else {
         loginModal.classList.remove('hide');

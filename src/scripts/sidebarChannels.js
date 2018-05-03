@@ -31,7 +31,6 @@ const sidebarChannels = (allData) => {
     sidebarStructure(channelComponent)
 }
 
-
 const channelsHeader = () => {
     const buttonFactory = require('./buttonFactoryIcon');
     const newChannelModal = require('./newChannelModal');

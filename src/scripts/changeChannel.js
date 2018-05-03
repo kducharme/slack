@@ -1,3 +1,4 @@
+// Allows user to change channel and adds styling on the side bar
 const changeChannel = (evt) => {
     const setCurrentChannel = require('./channelCheck').setCurrentChannel;
     const channelDetails = require('./channelDetails').channelDetailsLeft;
@@ -21,6 +22,7 @@ const changeChannel = (evt) => {
     loadMessages(clickedChannel.id)
 }
 
+// When user changes channels, this clears the messages from the old channel
 const clearMessages = () => {
     const printArea = document.querySelectorAll('#messages');
     printArea.forEach(m => {

@@ -48,6 +48,7 @@ const createChannelContent = () => {
     return contentStructure;
 }
 
+// title content for create new channel modal
 const modalTitle = () => {
     const titleStructure = document.createElement('span');
     const title = document.createElement('h1');

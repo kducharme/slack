@@ -12,10 +12,11 @@ const loadDefaultChannel = () => {
 
 }
 
+// Delay to load default channel
 window.onload = function(){
     setTimeout(function(){
         loadDefaultChannel();
-    }, 100);
+    }, 500);
  };
 
 module.exports = loadDefaultChannel;

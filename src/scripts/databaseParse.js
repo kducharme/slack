@@ -19,6 +19,7 @@ const databaseParse = (data) => {
     return allData;
 }
 
+// Parses the data received from DB to prepare for posting
 const messageParse = (data) => {
     const databaseLoad = require('./databaseLoad').loadDatabase;
     const sidebarChannels = require('./sidebarChannels');
