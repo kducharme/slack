@@ -31,7 +31,7 @@ const messageParse = (data) => {
             key,
             user: data[key].user,
             date: data[key].date,
-            text: data[key].message,
+            text: data[key].text,
             media: data[key].media
         }
         allData.push(indivMessage)

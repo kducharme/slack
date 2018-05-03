@@ -2,10 +2,11 @@
 const postMessage = (allMessages) => {
     const messageFactory = require('./messageFactory')
     const postArea = document.querySelector('.messages');
-    allMessages.forEach(message => {
-        const m = message.text;
-        const u = message.user;
-        const messageStructure = messageFactory(m, u)
+    allMessages.forEach(mess => {
+        const date = mess.date;
+        const message = mess;
+        console.log(mess)
+        const messageStructure = messageFactory(date, message)
         postArea.appendChild(messageStructure);
     })
     postArea.scrollTop = 9999;

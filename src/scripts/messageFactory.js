@@ -1,38 +1,39 @@
 // Factory for creating messages
-const messageFactory = (m, user) => {
-    const message = document.createElement('span');
+const messageFactory = (date, message) => {
+    const messageStructure = document.createElement('span');
     const body = document.createElement('span');
     body.classList.add('message__right')
-    const title = messageTitle(user);
+    const title = messageTitle(date, message.user.email);
     const avatar = messageAvatar();
-    message.classList.add('message')
+    messageStructure.classList.add('message')
     const text = document.createElement('p');
+
+    console.log(message)
     text.classList.add('message__body');
-    text.textContent = m;
+    text.textContent = message.text;
     
     body.appendChild(title)
     body.appendChild(text)
     
-    message.appendChild(avatar)
-    message.appendChild(body);
+    messageStructure.appendChild(avatar)
+    messageStructure.appendChild(body);
 
-    return message;
+    return messageStructure;
 }
 
 // TODO: swap email w/ displayName
-const messageTitle = (u) => {
-    const dateGenerator = require('./dateGenerator');
-    const d = dateGenerator();
+// TODO: date needs to display for date posted if message already exists
+const messageTitle = (date, user) => {
     const messageTitle = document.createElement('span');
     messageTitle.classList.add('message__title')
     const displayName = document.createElement('p')
-    displayName.textContent = u.email;
-    const date = document.createElement('p')
-    date.textContent = d;
+    displayName.textContent = user;
+    const postDate = document.createElement('p')
+    postDate.textContent = date;
     displayName.classList.add('message__title--user');
-    date.classList.add('message__title--date');
+    postDate.classList.add('message__title--date');
     messageTitle.appendChild(displayName)
-    messageTitle.appendChild(date)
+    messageTitle.appendChild(postDate)
     
     return messageTitle;
 }
