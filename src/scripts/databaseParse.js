@@ -2,6 +2,7 @@
 const databaseParse = (data) => {
     const databaseLoad = require('./databaseLoad').loadDatabase;
     const sidebarChannels = require('./sidebarChannels');
+    const sidebarUsers = require('./sidebarChannels');
     const channels = Object.keys(data);
     const allData = [];
     channels.forEach(key => {

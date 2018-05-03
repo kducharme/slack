@@ -33,7 +33,6 @@ const closeCreateNewModal = () => {
 // After user creates new channel, this resets the channel sidebar to show recently added channel
 const resetSidebar = () => {
     const sidebar = document.querySelector('#sidebar');
-    console.log(sidebar)
     sidebar.innerHTML = ''
     // if (sidebar.childNodes.length > 0) {
     //     side.forEach(c => {

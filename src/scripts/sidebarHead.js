@@ -40,11 +40,6 @@ const showSidebarDropdown = () => {
 window.addEventListener('click', function (e) {
     let header = document.querySelector('#sidebarHeader')
     const modal = document.querySelector('#accountOptions')
-
-    // if (modal) {
-    //     modal.classList.add('hide');
-    //     console.log('no')
-    // }
 })
 
 

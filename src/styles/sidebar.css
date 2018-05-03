@@ -62,6 +62,7 @@
 .sidebar__channels {
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 
 /* Section header */
@@ -142,6 +143,44 @@
 
 .logout__button {
     margin-top: 50px;
+}
+
+/* User listing section */
+
+.sidebar__users--list {
+    display: flex;
+    flex-direction: column;
+}
+
+.individual-user {
+    display: flex;
+    flex-direction: flex-start;
+    align-items: center;
+    height: 32px;
+    margin: 0 -15px 0 -15px;
+    padding: 0 15px 0 15px;
+    font-weight: 400!important;
+    font-size: 15px;
+    color: white;
+}
+
+.individual-user:hover {
+    cursor: pointer;
+    background-color: #253140;
+}
+
+.individual-user > img {
+    margin: 0 10px 0 0;
+    padding: 0;
+    height: 10px;
+    width: 10px;
+}
+
+.individual-user > a {
+    opacity: .7;
+    font-weight: 400!important;
+    font-size: 15px;
+    color: white;
 }
 
 /* Add new channel modal */
