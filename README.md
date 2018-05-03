@@ -7,4 +7,10 @@ Rebuilding Slack's web app experience to learn and practice web sockets, user ma
 1. View when other users are typing
 1. Search messages
 
+Technologies used:
+1. HTML, CSS, Vanilla JS
+2. Browserify
+3. Grunt
+4. Firebase
+
 Most recent live version can be viewed here (note: this is not responsive yet): https://slack-kd.firebaseapp.com
