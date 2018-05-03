@@ -1,8 +1,6 @@
 .sidebar__header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 50px;
+    flex-direction: column;
     margin: 0px -15px 0 -15px;
     padding: 15px 15px 15px 15px;
 }
@@ -10,6 +8,12 @@
 .sidebar__header:hover {
     cursor: pointer;
     background-color: #253140;
+}
+
+.sidebar__header--content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .sidebar__header--name {
@@ -37,6 +41,22 @@
     height: 0!important;
 }
 
+.sidebar__dropdown {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid var(--inputBorder);
+    border-radius: 10px;
+    position: fixed;
+    top: 40px;
+    left: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 101;
+    width: 250px;
+    height: 400px;
+}
+
 /* Channels section on sidebar */
 
 .sidebar__channels {
@@ -53,7 +73,7 @@
     align-items: center;
     height: auto;
     margin-bottom: 8px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .sidebar__channels--header > h2 {
