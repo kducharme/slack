@@ -8,26 +8,28 @@ const postMessage = () => {
     const addMessage = require('./databaseAddMessage').addMessage;
     const keepMessagesBottom = require('./keepMessagesBottom');
     const dateGenerator = require('./dateGenerator');
-    const message = document.querySelector('#writeMessage').value
+    const text = document.querySelector('#writeMessage').value
+    console.log(text)
     const postArea = document.querySelector('.messages');
     const user = getCurrentUser()
     const userID = user.uid;
     const channel = getCurrentChannel();
     const media = '';
 
-    const messageStructure = messageFactory(message, user)
     const date = dateGenerator();
-
-    postArea.appendChild(messageStructure);
-    clearInputs('writeMessage')
-
+    
     const newMessage = {
         channel: channel.id,
         user,
         date,
-        message,
+        text,
         media
     }
+    const messageStructure = messageFactory(date, newMessage)
+
+    postArea.appendChild(messageStructure);
+    clearInputs('writeMessage')
+
     addMessageToChannel(newMessage)
     addMessage(newMessage)
     keepMessagesBottom();
