@@ -181,6 +181,10 @@
     font-weight: 400!important;
     font-size: 15px;
     color: white;
+    width: 170px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 /* Add new channel modal */
