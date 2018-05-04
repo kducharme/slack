@@ -17,7 +17,7 @@
 }
 
 .sidebar__header--name {
-    width: 80%!important;
+    width: 84%!important;
     text-overflow: ellipsis;
     padding: -10px;
     overflow: hidden;
@@ -52,9 +52,22 @@
     left: 10px;
     overflow-x: hidden;
     overflow-y: hidden;
-    z-index: 101;
+    z-index: 999;
     width: 250px;
     height: 400px;
+}
+
+.sidebar__dropdown--background{ 
+    position: fixed;
+    top: 0;
+    z-index: 998;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    opacity: 0;
 }
 
 /* Channels section on sidebar */
@@ -181,6 +194,10 @@
     font-weight: 400!important;
     font-size: 15px;
     color: white;
+    width: 170px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 /* Add new channel modal */
