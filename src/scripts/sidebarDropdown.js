@@ -2,7 +2,6 @@ const dropdownContent = () => {
     const content = document.createElement('span');
     const getCurrentUser = require('./userCheck').getCurrentUser;
     const user = document.createElement('h2');
-    console.log(getCurrentUser().email)
     user.textContent = getCurrentUser().email;
     user.classList = 'sidebar__dropdown--user';
     const options = ['Profile & account', 'Preferences', 'Sign out']
@@ -12,9 +11,7 @@ const dropdownContent = () => {
         const option = document.createElement('p');
         option.textContent = o;
         option.classList = 'sidebar__dropdown--option'
-        console.log(o)
         if (o === 'Sign out') {
-            console.log('woo')
             const logoutUser = require('./userLogout')
             option.addEventListener('click', logoutUser);
         }
@@ -45,7 +42,6 @@ const sidebarDropdown = (evt) => {
 }
 
 const closeSidebarDropdown = (evt) => {
-    console.log('close')
     const modal = document.querySelector('#accountOptions');
     const background = document.querySelector('#dropdownBackground');
     const body = document.querySelector('body');
