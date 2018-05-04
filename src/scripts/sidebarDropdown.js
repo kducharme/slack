@@ -1,34 +1,52 @@
-const sidebarDropdownStructure = () => {
-    const body = document.querySelector('body');
-    const background = document.createElement('span');
-    background.setAttribute('id', 'dropdownBackground')
-    background.classList.add('sidebar__dropdown--background', 'hide');
-    background.addEventListener('click', closeSidebarDropdown)
-    const structure = document.createElement('span');
-    structure.setAttribute('id', 'accountOptions');
-    structure.classList.add('sidebar__dropdown', 'hide');
-    structure.textContent = 'hey hey hey'
-    body.appendChild(background)
-    body.appendChild(structure)
+const dropdownContent = () => {
+    const content = document.createElement('span');
+    const getCurrentUser = require('./userCheck').getCurrentUser;
+    const user = document.createElement('h2');
+    user.textContent = getCurrentUser().email;
+    user.classList = 'sidebar__dropdown--user';
+    const options = ['Profile & account', 'Preferences', 'Sign out']
+    const optionList = document.createElement('span');
+    optionList.classList.add('sidebar__dropdown--optionList')
+    options.forEach(o => {
+        const option = document.createElement('p');
+        option.textContent = o;
+        option.classList = 'sidebar__dropdown--option'
+        if (o === 'Sign out') {
+            const logoutUser = require('./userLogout')
+            option.addEventListener('click', logoutUser);
+        }
+        optionList.appendChild(option);
+    })
+    content.appendChild(user);
+    content.appendChild(optionList);
+    return content;
 }
 
-const showSidebarDropdown = (evt) => {
-    const modal = document.querySelector('#accountOptions');
-    const background = document.querySelector('#dropdownBackground');
-    modal.classList.remove('hide');
-    background.classList.remove('hide');
+const sidebarDropdown = (evt) => {
+    const body = document.querySelector('body');
+    const background = document.createElement('span');
+
+    background.setAttribute('id', 'dropdownBackground')
+    background.classList.add('sidebar__dropdown--background');
+    background.addEventListener('click', closeSidebarDropdown);
+
+    const dropdown = document.createElement('span');
+    dropdown.setAttribute('id', 'accountOptions');
+    dropdown.classList.add('sidebar__dropdown');
+
+    const content = dropdownContent();
+
+    body.appendChild(background)
+    dropdown.appendChild(content);
+    body.appendChild(dropdown)
 }
 
 const closeSidebarDropdown = (evt) => {
     const modal = document.querySelector('#accountOptions');
     const background = document.querySelector('#dropdownBackground');
-    modal.classList.add('hide');
-    background.classList.add('hide');
+    const body = document.querySelector('body');
+    body.removeChild(modal)
+    body.removeChild(background);
 }
 
-
-sidebarDropdownStructure();
-module.exports = {
-    sidebarDropdownStructure,
-    showSidebarDropdown
-};
+module.exports = sidebarDropdown;

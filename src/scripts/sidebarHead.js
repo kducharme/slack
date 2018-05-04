@@ -1,11 +1,11 @@
 const sidebarHead = (user) => {
-    const showSidebarDropdown = require('./sidebarDropdown').showSidebarDropdown;
+    const sidebarDropdown = require('./sidebarDropdown');
     const userLogout = require('./userLogout')
     const sidebar = document.querySelector('#sidebar');
     const header = document.createElement('span');
     header.classList = 'sidebar__header';
     header.setAttribute('id', 'sidebarHeader')
-    header.addEventListener('click', showSidebarDropdown);
+    header.addEventListener('click', sidebarDropdown);
     const content = headerContent(user);
     header.appendChild(content);
     sidebar.insertBefore(header, sidebar.firstChild)
