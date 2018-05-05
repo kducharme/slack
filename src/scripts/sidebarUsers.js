@@ -1,5 +1,6 @@
 const sidebarUserComponent = (allData) => {
     const userComponent = document.createElement('span');
+    userComponent.setAttribute('id', 'userList');
     const userList = document.createElement('span');
     const sidebarStructure = require('./sidebarStructure');
     const changeChannel = require('./changeChannel');

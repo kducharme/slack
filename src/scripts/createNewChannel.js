@@ -16,8 +16,6 @@ const createNewChannel = (e) => {
         users: users,
         messages: messages
     };
-    clearInputs(name.id);
-    clearInputs(purpose.id);
     databaseCreate(channel);
     resetSidebar();
     loadDatabase();
@@ -32,14 +30,16 @@ const closeCreateNewModal = () => {
 
 // After user creates new channel, this resets the channel sidebar to show recently added channel
 const resetSidebar = () => {
-    const sidebar = document.querySelector('#sidebar');
-    sidebar.innerHTML = ''
+    const channelList = document.querySelector('#channelList');
+    const userList = document.querySelector('#userList');
+    channelList.innerHTML = '';
+    userList.innerHTML = '';
     // if (sidebar.childNodes.length > 0) {
-    //     side.forEach(c => {
-    //         while (c.firstChild) {
-    //             c.removeChild(c.firstChild);
+    //     for (let i = 0; i < sidebar.childNodes.length; i++){
+    //         while (i.firstChild) {
+    //             i.removeChild(i.firstChild);
     //         }
-    //     })
+    //     }
     // }
 }
 
