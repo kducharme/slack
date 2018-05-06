@@ -1,5 +1,3 @@
-// NOT WORKING -- NEED TO FIX
-
 // Listening for updates in the database to post to DOM for all users
 const realtimeAddMessages = () => {
     let databaseRef = firebase.database().ref(`channel/`);
@@ -38,15 +36,15 @@ const verifyUser = (newMessage) => {
     }
 }
 
-// const postNewUserMessage = (channel) => {
-//     const loadMessages = require('./databaseLoad').loadMessages;
-//     const printArea = document.querySelectorAll('#messages');
-//     printArea.forEach(m => {
-//         while (m.firstChild) {
-//             m.removeChild(m.firstChild);
-//         }
-//     })
-//     loadMessages(channel);
-// }
+const postNewUserMessage = (channel) => {
+    const loadMessages = require('./databaseLoad').loadMessages;
+    const printArea = document.querySelectorAll('#messages');
+    printArea.forEach(m => {
+        while (m.firstChild) {
+            m.removeChild(m.firstChild);
+        }
+    })
+    loadMessages(channel);
+}
 
-// module.exports = realtimeAddMessages;
+module.exports = realtimeAddMessages;

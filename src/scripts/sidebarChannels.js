@@ -1,6 +1,7 @@
 // Creates channels component for sidebar
 const sidebarChannels = (allData) => {
     const channelComponent = document.createElement('span');
+    channelComponent.setAttribute('id', 'channelList')
     const channelList = document.createElement('span');
     const sidebarUsers = require('./sidebarUsers');
     const sidebarStructure = require('./sidebarStructure');

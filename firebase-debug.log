@@ -1,0 +1,56 @@
+[debug] [2018-05-05T01:22:57.709Z] ----------------------------------------------------------------------
+[debug] [2018-05-05T01:22:57.711Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-05-05T01:22:57.712Z] CLI Version:   3.18.4
+[debug] [2018-05-05T01:22:57.712Z] Platform:      darwin
+[debug] [2018-05-05T01:22:57.712Z] Node Version:  v6.10.1
+[debug] [2018-05-05T01:22:57.713Z] Time:          Fri May 04 2018 20:22:57 GMT-0500 (CDT)
+[debug] [2018-05-05T01:22:57.713Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-05T01:22:57.727Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-05T01:22:57.727Z] > authorizing via signed-in user
+[debug] [2018-05-05T01:22:57.731Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/slack-kd  
+  
+ Fri May 04 2018 20:22:57 GMT-0500 (CDT)
+[debug] [2018-05-05T01:22:58.037Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-05T01:22:58.038Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/slack-kd/tokens  
+  
+ Fri May 04 2018 20:22:58 GMT-0500 (CDT)
+[debug] [2018-05-05T01:22:58.351Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'slack-kd'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing dist directory for upload...
+[debug] [2018-05-05T01:22:58.889Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/slack-kd/uploads/-LBhtGVfmSFsXkb_Ek_T?fileCount=73&message=  
+  
+ Fri May 04 2018 20:22:58 GMT-0500 (CDT)
+[debug] [2018-05-05T01:22:59.718Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-05T01:22:59.718Z] [hosting] .tgz uploaded successfully, waiting for extraction
+[debug] [2018-05-05T01:23:26.007Z] ----------------------------------------------------------------------
+[debug] [2018-05-05T01:23:26.010Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-05-05T01:23:26.010Z] CLI Version:   3.18.4
+[debug] [2018-05-05T01:23:26.010Z] Platform:      darwin
+[debug] [2018-05-05T01:23:26.010Z] Node Version:  v6.10.1
+[debug] [2018-05-05T01:23:26.011Z] Time:          Fri May 04 2018 20:23:26 GMT-0500 (CDT)
+[debug] [2018-05-05T01:23:26.011Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-05T01:23:26.024Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-05T01:23:26.024Z] > authorizing via signed-in user
+[debug] [2018-05-05T01:23:26.026Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/slack-kd  
+  
+ Fri May 04 2018 20:23:26 GMT-0500 (CDT)
+[debug] [2018-05-05T01:23:26.329Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-05T01:23:26.330Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/slack-kd/tokens  
+  
+ Fri May 04 2018 20:23:26 GMT-0500 (CDT)
+[debug] [2018-05-05T01:23:26.607Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'slack-kd'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing dist directory for upload...
+[debug] [2018-05-05T01:23:27.143Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/slack-kd/uploads/-LBhtNPIdG0ccvM37OoR?fileCount=73&message=  
+  
+ Fri May 04 2018 20:23:27 GMT-0500 (CDT)
+[debug] [2018-05-05T01:23:27.980Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-05T01:23:27.980Z] [hosting] .tgz uploaded successfully, waiting for extraction
