@@ -1,5 +1,3 @@
-// NOT WORKING -- NEED TO FIX
-
 // Listening for updates in the database to post to DOM for all users
 const realtimeAddMessages = () => {
     let databaseRef = firebase.database().ref(`channel/`);
